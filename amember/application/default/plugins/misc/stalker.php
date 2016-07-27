@@ -6,7 +6,8 @@ class Am_Plugin_Stalker extends Am_Plugin
         parent::init();
         $this->getDi()->billingPlanTable->customFields()
             ->add(new Am_CustomFieldText('stalker_id', "Stalker External product Id"));
-
+        $this->getDi()->userTable->customFields()->add('user_stb_disable');
+        $this->getDi()->userTable->customFields()->add('stb_pass');        
     }
     
     protected $_configPrefix = 'misc.';
